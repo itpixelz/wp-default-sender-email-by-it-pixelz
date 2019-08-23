@@ -1,10 +1,10 @@
 === Wp Default Sender Email by IT Pixelz ===
 Contributors: itpixelz
 Donate link: http://www.itpixelz.com/
-Tags: email, mail, default mail, email from, outgoing mail
+Tags: email, mail, default mail, email from, sender email, default sender email, default sender name, wp default sender email, outgoing mail
 Requires at least: 3.0.1
 Tested up to: 5.2.2
-Stable tag: trunk
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,7 +21,7 @@ The main benefit you will get that, sometimes your default WordPress email addre
 
 == Installation ==
 
-1. Download the plugin zip file and extract it from zip folder and uplaod  `wp_default_sender_email_itpixelz` to the `/wp-content/plugins/` directory
+1. Download the plugin zip file and extract it from zip folder and upload  `wp-default-sender-email-by-it-pixelz` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Go to settings of the plugin and edit options and save it. (Settings -> WP Default Mail)
 4. Thats it!!! Enjoy :)
@@ -38,5 +38,5 @@ The main benefit you will get that, sometimes your default WordPress email addre
 
 = 2.0 =
 
-* Stores default sender name from blog name and email ID as support@<domain name>
+* Stores default sender name from blog name and email ID as support@yourwebsite.com
 * Improvements in security best practices

@@ -11,7 +11,7 @@
  * Plugin Name:       Wp Default Sender Email by IT Pixelz
  * Plugin URI:        https://wordpress.org/plugins/wp-default-sender-email-by-it-pixelz/
  * Description:       Get rid of default email from like this wordpress@domain.com, use your own brand name!
- * Version:           2.0.0
+ * Version:           2.0.1
  * Author:            Umar Draz
  * Author URI:        https://profiles.wordpress.org/itpixelz/
  * License:           GPL-2.0+
