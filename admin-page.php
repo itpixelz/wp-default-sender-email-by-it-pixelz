@@ -37,18 +37,19 @@ class Wdsei_admin_setttings_itpixelz
     {
         // Set class property
         $this->options = get_option('wdsei_itpixelz_options'); ?>
-        <div class="wrap">
-            <h2>Wp Default Sender Email (by IT Pixelz)</h2>
+        <div class="wrap wdsei_settings_area">
+		        <h2>Wp Default Sender Email (by IT Pixelz)</h2>
             <form method="post" action="options.php">
             <?php
                 // This prints out all hidden setting fields
                 settings_fields('wdsei_itpixez_settings_options');
-        do_settings_sections('wp-default-sender-email-itpixelz');
-        submit_button(); ?>
+                do_settings_sections('wp-default-sender-email-itpixelz');
+                submit_button(); ?>
             </form>
 			<p><strong>Warning:</strong> If you are going to use email account other than the domain on your hosting, then you may have to confirm if your current web hosting is offering so.</p>
         </div>
         <?php
+
     }
 
     /**
@@ -110,7 +111,7 @@ class Wdsei_admin_setttings_itpixelz
      */
     public function wdsei_print_section_info()
     {
-        print 'Enter the details below:';
+        print '<p>Enter the details below:</p>';
     }
 
     /**
