@@ -3,8 +3,8 @@ Contributors: itpixelz
 Donate link: http://www.itpixelz.com/
 Tags: email, mail, default mail, email from, outgoing mail
 Requires at least: 3.0.1
-Tested up to: 5.1.1
-Stable tag: 5.0.3
+Tested up to: 5.2.2
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,3 +32,11 @@ The main benefit you will get that, sometimes your default WordPress email addre
 1. Go to the Settings link from left side bar in wp-admin and then go to the link "WP Default Mail" and then change the settings as per your requirement.
 2. Sender name and email id
 3. Sender name and email id in email client
+
+
+== Changelog ==
+
+= 2.0 =
+
+* Stores default sender name from blog name and email ID as support@<domain name>
+* Improvements in security best practices
