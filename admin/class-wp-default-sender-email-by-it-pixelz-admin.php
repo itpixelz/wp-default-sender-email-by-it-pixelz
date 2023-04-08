@@ -109,7 +109,6 @@ class Wp_Default_Sender_Email_By_It_Pixelz_Admin {
 		}
 	}
 
-
 	/**
 	 * add admin menu
 	 *
@@ -132,9 +131,7 @@ class Wp_Default_Sender_Email_By_It_Pixelz_Admin {
 	 * @since    2.0.0
 	 */
 	function settings_page() {
-
 		?>
-
         <div class="wrap" id="wdsei_settings_wrapper">
             <h1><?php _e( 'WP Default Sender Email Address Settings', 'wp-default-sender-email-by-it-pixelz' ) ?></h1>
             <form method="post" action="options.php">
@@ -148,9 +145,7 @@ class Wp_Default_Sender_Email_By_It_Pixelz_Admin {
                 <strong><?php _e( 'Note:', 'wp-default-sender-email-by-it-pixelz' ); ?></strong>
 				<?php _e( 'If you are going to use email account other than the domain on your hosting, then you may have to confirm if your current web hosting is offering so.', 'wp-default-sender-email-by-it-pixelz' ); ?>
             </p>
-
         </div>
-
 		<?php
 	}
 
@@ -166,7 +161,6 @@ class Wp_Default_Sender_Email_By_It_Pixelz_Admin {
 			[ $this, 'sanitize_text_fields' ]
 		);
 
-
 		add_settings_section(
 			'wdsei_settings_section',
 			__( 'Update Your Default Mail Sender Details', 'wp-default-sender-email-by-it-pixelz' ),
@@ -181,6 +175,7 @@ class Wp_Default_Sender_Email_By_It_Pixelz_Admin {
 			$this->options_settings_key,
 			'wdsei_settings_section'
 		);
+
 		add_settings_field(
 			'sender_mail',
 			__( 'Sender Mail ID', 'wp-default-sender-email-by-it-pixelz' ),
@@ -188,8 +183,6 @@ class Wp_Default_Sender_Email_By_It_Pixelz_Admin {
 			$this->options_settings_key,
 			'wdsei_settings_section'
 		);
-
-
 	}
 
 
@@ -199,12 +192,10 @@ class Wp_Default_Sender_Email_By_It_Pixelz_Admin {
 	 * @since    2.0.0
 	 */
 	public function sender_name_callback( $args ) {
-
 		$val = ( isset( $this->options_settings['sender_name'] ) ) ? $this->options_settings['sender_name'] : '';
 
 		echo '<input name="' . $this->options_settings_key . '[sender_name]" id="sender_name" type="text" value="' . esc_attr( $val ) . '" class="regular-text" />
               <p>' . __( 'Sender email name, From name of the email address', 'wp-default-sender-email-by-it-pixelz' ) . '</p>';
-
 	}
 
 	/**
@@ -218,7 +209,6 @@ class Wp_Default_Sender_Email_By_It_Pixelz_Admin {
 
 		echo '<input name="' . $this->options_settings_key . '[sender_mail]" id="sender_mail" type="email" value="' . esc_attr( $val ) . '" class="regular-text" />
               <p>' . __( 'Sender email address, From email ID', 'wp-default-sender-email-by-it-pixelz' ) . '</p>';
-
 	}
 
 
@@ -238,7 +228,6 @@ class Wp_Default_Sender_Email_By_It_Pixelz_Admin {
 	 * @since    2.0.0
 	 */
 	public function sanitize_text_fields( $fields ) {
-
 		$valid_fields = [];
 
 		// Validate title field
@@ -249,6 +238,4 @@ class Wp_Default_Sender_Email_By_It_Pixelz_Admin {
 
 		return apply_filters( 'validate_options', $valid_fields, $fields );
 	}
-
-
 }

@@ -75,7 +75,6 @@ class Wp_Default_Sender_Email_By_It_Pixelz {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_common_hooks();
-
 	}
 
 	/**
@@ -120,7 +119,6 @@ class Wp_Default_Sender_Email_By_It_Pixelz {
 
 
 		$this->loader = new Wp_Default_Sender_Email_By_It_Pixelz_Loader();
-
 	}
 
 	/**
@@ -133,11 +131,8 @@ class Wp_Default_Sender_Email_By_It_Pixelz {
 	 * @access   private
 	 */
 	private function set_locale() {
-
 		$plugin_i18n = new Wp_Default_Sender_Email_By_It_Pixelz_i18n();
-
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
-
 	}
 
 	/**
@@ -148,21 +143,18 @@ class Wp_Default_Sender_Email_By_It_Pixelz {
 	 * @access   private
 	 */
 	private function define_admin_hooks() {
-
 		$plugin_admin = new Wp_Default_Sender_Email_By_It_Pixelz_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-//		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
 		// admin menu
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'admin_menu' );
 
 		// register settings fields
-		$this->loader->add_action( 'admin_init', $plugin_admin, 'wp_setting_init' );
-		$this->loader->add_action( 'admin_init', $plugin_admin, 'admin_redirect' );
+		$this->loader->add_action( 'admin_init', $plugin_admin, 'wp_setting_init', 10, 0 );
+		$this->loader->add_action( 'admin_init', $plugin_admin, 'admin_redirect', 10, 0 );
 
 		$this->loader->add_filter( 'plugin_action_links_' . WP_DEFAULT_SENDER_EMAIL_BY_IT_PIXELZ_BASE_FILE, $plugin_admin, 'add_settings_links' );
-
 	}
 
 	/**

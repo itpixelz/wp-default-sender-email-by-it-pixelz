@@ -18,9 +18,7 @@ class Wp_Default_Sender_Email_By_It_Pixelz_Activator {
 	 * @since    2.0.0
 	 */
 	public static function activate() {
-
 		add_option( 'wdsei_activation_redirect', true );
-
 
 		$current_user = wp_get_current_user();
 		if ( ! $current_user->exists() ) {
@@ -43,8 +41,5 @@ class Wp_Default_Sender_Email_By_It_Pixelz_Activator {
 			add_option( WP_DEFAULT_SENDER_EMAIL_BY_IT_PIXELZ_OPTIONS_KEY, $settings_defaults, $deprecated, $autoload );
 			wp_cache_delete( 'alloptions', 'options' );
 		}
-
-
 	}
-
 }
